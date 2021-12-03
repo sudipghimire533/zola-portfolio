@@ -7,10 +7,13 @@ module.exports = {
             'bg': 'background'
         },
         maxHeight: {
-            '300px': '300px'
+            '300px': '300px',
         },
         maxWidth: {
             '360px': '360px'
+        },
+        minHeight: {
+            'screen': '100vh'
         }
     }
   },
