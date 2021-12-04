@@ -1,0 +1,49 @@
+{# All sidebar details are built from sidebar frontmatter in content/sidebar.md #}
+{% set sidebar = get_page(path="sidebar.md") %}
+
+{% set name = sidebar.title | trim | title %}
+{% set intro = sidebar.description | trim %}
+{% set location = sidebar.extra.location | trim %}
+{% set avatar_img_path = sidebar.extra.avatar %}
+{% set menus = sidebar.extra.menu %}
+{% set social = sidebar.extra.social %}
+
+<nav
+    class="h-screen bg-gray-900 text-white overflow-y-auto max-w-360px relative"
+    id="nav">
+    <div class="inline-flex flex-col h-full p-4 md:pt-12 justify-between">
+        <div class="inline-flex flex-col items-center">
+            <img
+                src="{{avatar_img_path}}"
+                height="148"
+                width="148"
+                class="rounded-full border-4 border-white p-1 shadow-md"
+                alt="{{- name ~ 'from' ~ location -}}"
+                loading="lazy" />
+            <h1 class="text-4xl font-bold text-center mt-2">{{- name -}}</h1>
+            <h3 class="text-center mb-4 text-md">
+                <p class="text-pink-400 inline">{{- intro -}}</p>
+                <p class="inline">from {{ location -}}</p>
+            </h3>
+        </div>
+        <div class="inline-flex flex-col items-stretch text-center justify-around flex-grow-1">
+            {% for menu in menus %}
+                {% set label = menu.label | trim %}
+                {% set icon = menu.icon %}
+                {% set target = menu.target | trim %}
+                <a href="{{target}}" class="py-2 my-1 hover:bg-gray-800 focus:bg-gray-800 rounded-lg transition-bg duration-400 group">
+                    <i class="{{icon}} pr-2 text-gray-400 group-hover:text-pink-300"></i>{{- label -}}
+                </a>
+            {% endfor %}
+        </div>
+        <div class="mt-8">
+            <div class="text-center mb-2 text-lg">
+                {{ social_icons(social=social) }}
+            </div>
+            <div class="">
+                &copy; Copyright 2021. All right reserved. Made with <i class="fas fa-heart text-pink-700"></i> by Sudip Ghimire
+            </div>
+        </div>
+    </div>
+</nav>
+

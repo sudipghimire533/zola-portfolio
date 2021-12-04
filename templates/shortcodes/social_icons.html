@@ -1,0 +1,43 @@
+{% set social = social %}
+{% set icon_classes = [] %}
+{% set links = [] %}
+{% set titles = [] %}
+
+{% if social.facebook is defined %}
+    {% set class = class ~  "fab fa-facebook" %}
+    {% set link = "https://facebook.com/" ~ user_id %}
+    {% set title = "Meet me on facebook" %}
+{% elif social.twitter is defines %}
+    {% set class = "fab fa-twitter" %}
+    {% set link = "https://twitter.com/" ~ user_id %}
+    {% set title = "Follow me on Twitter" %}
+{% elif social.linkedin is defines %}
+    {% set class = "fab fa-linkedin" %}
+    {% set link = "https://linkedin.com/in/" ~ user_id %}
+    {% set title = "See my profile on Linkedin" %}
+{% elif social.github is defined %}
+    {% set class = "fab fa-github" %}
+    {% set link = "https://github.com/" ~ user_id %}
+    {% set title = "See my activity on Github" %}
+{% elif social.twitter is defined %}
+    {% set class = "fab fa-twitter" %}
+    {% set link = "https://twitter.com/" ~ user_id %}
+    {% set title = "See my activity on Gitlab" %}
+{% elif social.telegram is defined %}
+    {% set class = "fab fa-telegram" %}
+    {% set link = "https://t.me/" ~ user_id %}
+    {% set title = "Say hy on Telegram" %}
+{% elif social.email is defined %}
+    {% set class = "fab fa-envelope" %}
+    {% set link = "mailto:" ~ user_id %}
+    {% set title = "Email me" %}
+{% elif social.phone is defined %}
+    {% set class = "fab fa-" %}
+    {% set link = "tel:" ~ user_id %}
+    {% set title = "Give me a call" %}
+{% endif %}
+
+
+<a href="{{- link -}}" target="_blank" class="p-2" title="{{- title -}}" >
+    <i class="{{- icon_class }}"></i>
+</a>
