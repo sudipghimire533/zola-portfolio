@@ -1,0 +1,14 @@
+{%- set about = get_page(path="about-me.md") -%}
+
+{%- set heading = about.title | trim -%}
+{%- set content = about.content -%}
+<section id="" class="py-6 mx-4 px-4 my-4 rounded-lg" style="background-color: #272727">
+    {%- if about.anchor_name is defined -%}
+        <a name="{{- about.anchor_name | trim -}}"></a>
+    {%- endif -%}
+    <h1 class="text-3xl text-white"><b class="pr-2 text-pink-400">#</b>{{- heading -}}</h1>
+    <div class="text-gray-200 text-lg px-4 section-description">
+        {{- content | spaceless | trim | safe -}}
+    </div>
+</section>
+

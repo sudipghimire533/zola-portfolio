@@ -1,0 +1,16 @@
+{%- set skills = get_page(path="skills.md") -%}
+
+{%- set content = skills.content -%}
+
+<section id="" class="py-6 mx-4 px-4 mb-4 rounded-lg" style="background-color: #272727">
+    {%- if about.extra.anchor_name is defined -%}
+        <a name="{{- about.anchor_name | trim -}}">
+    {%- endif -%}
+    <h1 class="text-3xl text-white"><b class="pr-2 text-pink-400">#</b>Skills & Tools</h1>
+    <div class="text-lg text-gray-200 px-4">
+        {{- content | spaceless | trim | safe -}}
+    </div>
+    <div class="">
+    </div>
+</section>
+

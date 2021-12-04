@@ -3,12 +3,14 @@
     <head>
         <title>Sudip Ghimire - Developer</title>
         <link rel="stylesheet" href="tailwind.css" media="all" />
+        <link rel="stylesheet" href="style.css" media="all" />
         <script src="https://kit.fontawesome.com/32aa403b75.js" crossorigin="anonymous"></script>
         <script type="text/javascript" src="script.js"></script>
     </head>
 
     <body class="flex flex-row p-0 m-0 flex-nowrap max-h-screen overflow-hidden">
-        {% include "sidebar.html" %}
+        {%- include "sidebar.html" -%}
+
         <main class="flex-grow flex flex-col items-stretch overflow-y-auto" id="main">
             <section id="home_page" class="min-h-screen">
                 <div class="home_cover h-full relative">
@@ -17,25 +19,10 @@
                 </div>
             </section>
 
-            <section id="" class="py-6 mx-4 px-4 my-4 rounded-lg" style="background-color: #272727">
-                <a name="about"></a>
-                <h1 class="text-3xl text-white"><b class="pr-2 text-pink-400">#</b>About me</h1>
-                <h3 class="text-gray-200 text-lg px-4">
-                    <p class="mt-2 pt-2">The name is Sudip Ghimire. I am currently living in Pokhara, Nepal. In early 2019, I was told machines are to programmed and I have been hitting keyboard ever since. I remember myself exploring everything from Game development, 3D modeling, web development to Cyber Security and what not. I belive in creating value.</p>
-                    <p class="pt-2">If I am not wiriting about something random my mind pop me with, you will find me listening to music all the time. Beside those, I love reading blogs, watching fantasy and walking some great miles. And of course I do love watching people behaviour and reaction over several things.</p>
-                    <p class="pt-2">Exploring open source have always been something that keeps me engaged and contributing to such great communities is even more pleasing. Do you know, how fun is it to just install and try new programs, learning about not-so-mature technologies or someone else's hobby project?</p>
-                </h3>
-            </section>
+            {%- include "about.html" -%}
 
-            <section id="" class="py-6 mx-4 px-4 mb-4 rounded-lg" style="background-color: #272727">
-                <a name="skills"></a>
-                <h1 class="text-3xl text-white"><b class="pr-2 text-pink-400">#</b>Skills & Tools</h1>
-                <h3 class="text-lg text-gray-200 px-4">
-                    <p class="mt-2 pt-2">I would like to introduce myself as a software developer who also happened to be activly involved in web development and cloud thing. These are my skills set I am confident enough about along with some of tools I constantly use.</p>
-                </h3>
-                <div class="">
-                </div>
-            </section>
+            {%- include "skills.html" -%}
+
 
             <section id="" class="py-6 mx-4 px-4 mb-4 rounded-lg" style="background-color: #272727">
                 <a name="education"></a>
