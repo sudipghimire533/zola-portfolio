@@ -19,9 +19,8 @@
         {{- intro | spaceless | trim | safe -}}
     </div>
     <div class="flex flex-row flex-wrap mt-2">
-        {%- set first_label = section1.label | trim -%}
         <div class="flex-grow flex-shrink bg-gray-700 p-2 m-2 rounded-md">
-            <h1 class="text-2xl text-white text-center">{{- first_label -}}</h1>
+            <h1 class="text-2xl text-white text-center">{{- section1.label | trim -}}</h1>
             <div class="px-2 relative border-gray-300">
                 {%- set items = section1.item -%}
                 {%- set items_count = items | length -%}
@@ -48,7 +47,7 @@
             </div>
             </div>
             <div class="flex-grow flex-shrink bg-gray-700 p-2 m-2 rounded-md">
-                <h1 class="text-2xl text-white text-center">Character</h1>
+            <h1 class="text-2xl text-white text-center">{{- section2.label | trim -}}</h1>
                 <div class="p-2 text-white">
                 <!-- Add image of text with different colors with kewords lieke honesty, learner, communication etc -->
             </div>

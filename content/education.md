@@ -34,7 +34,7 @@ label = "Academic"
 
 
 [[extra.section]]
-label = "Character"
+label = "Certificates"
 
 +++
 Always have been bruteforcing on everything to improve myself and when it comes to the lessons I learnt from schooling and people, I look my shadow with respect. I owe this to my family and those souls who did more than enough to make me feel blessed <i class='fas fa-heart text-pink-400'></i>

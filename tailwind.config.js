@@ -4,21 +4,19 @@ module.exports = {
   theme: {
     extend: {
         transitionProperty: {
-            'bg': 'background'
-        },
-        maxHeight: {
-            '300px': '300px',
-        },
-        maxWidth: {
-            '360px': '360px'
+            'bg': 'background',
         },
         minHeight: {
-            'screen': '100vh'
+            'screen': '100vh',
         },
         width: {
-            '2px': '2px'
-        }
-    }
+            '2px': '2px',
+        },
+        maxWidth: {
+            '370px': '370px',
+            '400px': '400px',
+        },
+    },
   },
   variants: {
     extend: {

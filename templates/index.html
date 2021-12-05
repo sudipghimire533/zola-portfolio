@@ -1,6 +1,8 @@
 <!DOCTYPE HTML>
 <HTML lang="en_us">
     <head>
+        <meta content="width=device-width,initial-scale=1.0" name="viewport">
+
         <title>Sudip Ghimire - Developer</title>
         <link rel="stylesheet" href="tailwind.css" media="all" />
         <link rel="stylesheet" href="style.css" media="all" />
@@ -12,12 +14,7 @@
         {%- include "sidebar.html" -%}
 
         <main class="flex-grow flex flex-col items-stretch overflow-y-auto" id="main">
-            <section id="home_page" class="min-h-screen">
-                <div class="home_cover h-full relative">
-                    <div style="background-image: url('images/img_bg_1.jpg')"
-                        class="bg-no-repeat bg-cover bg-fixed bg-right absolute h-full w-full right-20"></div>
-                </div>
-            </section>
+            {%- include "cover.html" -%}
 
             {%- include "about.html" -%}
 
@@ -25,6 +22,9 @@
 
             {%- include "education.html" -%}
 
+            {%- include "projects.html" -%}
+
+            {%- include "contact.html" -%}
         </main>
     </body>
 </HTML>

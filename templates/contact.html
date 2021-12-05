@@ -1,7 +1,7 @@
-{%- set about = get_page(path="about-me.md") -%}
+{%- set contact = get_page(path="contact.md") -%}
 
-{%- set heading = about.title | trim -%}
-{%- set content = about.content -%}
+{%- set heading = contact.title | trim -%}
+{%- set content = contact.content -%}
 <section id="" class="py-6 sm:mx-4 px-1 sm:px-4 my-4 sm:rounded-lg" style="background-color: #272727">
     {%- if about.extra.anchor_name is defined -%}
         <a name="{{- about.extra.anchor_name | trim -}}"></a>

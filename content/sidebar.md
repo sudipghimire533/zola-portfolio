@@ -17,11 +17,6 @@ icon = "fas fa-tools"
 target="#skills"
 
 [[extra.menu]]
-label = "Work Experience"
-icon = "fas fa-briefcase"
-target="#experience"
-
-[[extra.menu]]
 label = "My Blogs"
 icon = "fas fa-newspaper"
 target="#about"
