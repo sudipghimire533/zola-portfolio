@@ -19,6 +19,14 @@ source = "https://www.gitlab.com/pprimordial/primordial-website"
 home = "https://primordial-shop.netlify.app"
 tags = ['zola', 'jamstack', 'netlify', 'tailwind', 'web']
 
+[[extra.project]]
+name = "Zola-portfolio"
+intro = "Sleek, configurable and lightweight one page portfolio theme for zola site builder backed by tailwindcss."
+cover = "/images/projects/zola-portfolio.png"
+source = "https://github.com/sudipghimire533/sudipghimire533/github.io"
+home = "https://me.sudipg.com.np"
+tags = ['zola', 'web', 'tailwind', 'theme']
+
 
 +++
 

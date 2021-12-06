@@ -5,7 +5,7 @@ title = "About me"
 anchor_name = "about"
 +++
 The name is Sudip Ghimire. I am currently living in Pokhara, Nepal. In early 2019, I was told machines are to programmed and I have been hitting keyboard ever since.
-I remember myself exploring everything from Game development, 3D modeling, web development to Cyber Security and what not.
+In early days, I remember myself exploring everything from Game development, 3D modeling, web development to Cyber Security and what not.
 I belive in creating value.
 
 

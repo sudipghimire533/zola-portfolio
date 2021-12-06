@@ -1,5 +1,5 @@
 +++
-title = "Say me hello!"
+title = "Send me a hello!"
 
 [extra]
 amchor_name = "contact"

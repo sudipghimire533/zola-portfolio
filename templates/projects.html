@@ -21,16 +21,19 @@
             {%- set cover = project.cover -%}
             {%- set tags = project.tags -%}
             {%- set height = "0" -%}
+            {%- set direction = ["row-reverse", "r"] -%}
             {%- if i == 0 -%}
                 {%- set height = "auto" -%}
+            {%- elif i%2 != 0 -%}
+                {%- set direction = ["row", "l"] -%}
             {%- endif -%}
-            <div class="mt-4 flex-row md:flex group cursor-pointer">
+            <div class="mt-8 md:mt-12 flex-{{- direction | nth(n=0) }} md:flex group cursor-pointer">
 
             <img src="{{-cover-}}" alt="{{-name-}}" width="520" height="auto"
-                class="max-w-full hidden md:block opacity-60 transition-all duration-300 group-hover:opacity-100" />
-            <div class="p-2 md:m-4 bg-gray-900 md:bg-transparent bg-opacity-50 relative flex-grow w-full">
+                class="max-w-full hidden md:block opacity-60 transition-all rounded-lg duration-300 group-hover:opacity-100" />
+            <div class="p-2 md:m-4 bg-gray-900 md:bg-transparent rounded-lg md:rouned-none bg-opacity-50 relative flex-grow w-full">
                 <h1 class="text-2xl font-bold text-pink-700 py-2">{{- name | escape -}}</h1>
-                <p class="text-gray-200 py-6 px-4 md:-ml-32 rounded"
+                <p class="text-gray-200 py-6 px-4 md:-m{{- direction | nth(n=1) -}}-32 rounded"
                     style="background-color: #353535">
                     {{- intro | spaceless | safe -}}
                 </p>
@@ -41,12 +44,12 @@
                 </div>
                 {%- if project.source is defined -%}
                     <a href="{{-project.source-}}" target="_blank" class="p-1 text-pink-500 hover:text-pink-400 transition-color duration-300">
-                        <i class="fas fa-external-link-alt text-lg text-pink-500 hover:text-pink-400 pr-1"></i>Visit Project
+                        <i class="fas fa-external-link-alt text-sm text-pink-500 hover:text-pink-400 pr-1"></i>Visit Project
                     </a>
                 {%- endif -%}
                 {%- if project.home is defined -%}
                     <a href="{{-project.home-}}" target="_blank" class="p-1 text-pink-500 hover:text-pink-400 transition-color duration-300">
-                        <i class="fas fa-external-link-alt text-lg text-pink-500 hover:text-pink-400 pr-1"></i>Home page
+                        <i class="fas fa-external-link-alt text-sm text-pink-500 hover:text-pink-400 pr-1"></i>Home page
                     </a>
                 {%- endif -%}
             </div>
@@ -54,10 +57,5 @@
             </div>
         {%- endfor -%}
 
-        <div class="text-center text-gray-400 mt-6 inline-flex w-full justify-center">
-            {%- for i in range(start=0, end=project_count) -%}
-                <i class="fas fa-grip-lines p-2 cursor-pointer hover:text-white"></i>
-            {%- endfor -%}
-        </div>
     </div>
 </section>
