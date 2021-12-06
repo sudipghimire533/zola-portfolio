@@ -2,13 +2,7 @@
 
 {%- set heading = education.title | trim -%}
 {%- set intro = education.content -%}
-{%- for sec in education.extra.section -%}
-    {%- if sec.item -%}
-        {% set_global section1 = sec %}
-    {%- else -%}
-        {% set_global section2 = sec %}
-    {%- endif -%}
-{%- endfor -%}
+{%- set items = education.extra.item -%}
 
 <section id="" class="py-6 mx-4 px-4 mb-4 rounded-lg" style="background-color: #272727">
     {% if education.extra.anchor_name is defined %}
@@ -19,37 +13,30 @@
         {{- intro | spaceless | trim | safe -}}
     </div>
     <div class="flex flex-row flex-wrap mt-2">
-        <div class="flex-grow flex-shrink bg-gray-700 p-2 m-2 rounded-md">
-            <h1 class="text-2xl text-white text-center">{{- section1.label | trim -}}</h1>
-            <div class="px-2 relative border-gray-300">
-                {%- set items = section1.item -%}
-                {%- set items_count = items | length -%}
-                {%- for item in items -%}
-                    {%- set i = loop.index -%}
-                    {%- set name = item.name | trim -%}
-                    {%- set duration = item.duration | trim -%}
-                    {%- set bullets = item.info -%}
-                    <div class="my-2 relative">
-                        {# Do not show vertical line in last item #}
-                        {%- if i != items_count -%}
-                            <span class="h-full w-2px bg-gray-400 left-1 absolute top-6"></span>
-                        {%- endif -%}
-                        <i class="fas fa-circle text-pink-400 text-sm pr-2"></i>
-                        <h3 class="text-xl inline text-white">{{- name -}}</h3>
-                        <i class="text-gray-400">{{- duration -}}</i>
-                        <p class="text-gray-200 pl-6">
-                            {%- for bullet in bullets -%}
-                                {{- "- " ~ bullet -}}<br/>
-                            {%- endfor -%}
-                        </p>
-                    </div>
-                {%- endfor -%}
-            </div>
-            </div>
-            <div class="flex-grow flex-shrink bg-gray-700 p-2 m-2 rounded-md">
-            <h1 class="text-2xl text-white text-center">{{- section2.label | trim -}}</h1>
-                <div class="p-2 text-white">
-                <!-- Add image of text with different colors with kewords lieke honesty, learner, communication etc -->
+        <div class="px-2 relative border-gray-300">
+            {%- set items_count = items | length -%}
+            {%- for item in items -%}
+                {%- set i = loop.index -%}
+                {%- set name = item.name | trim -%}
+                {%- set duration = item.duration | trim -%}
+                {%- set bullets = item.info -%}
+                {%- set document = item.doc -%}
+                <div class="my-2 relative">
+                    {# Do not show vertical line in last item #}
+                    {%- if i != items_count -%}
+                        <span class="h-full w-2px bg-gray-400 left-1 absolute top-6"></span>
+                    {%- endif -%}
+                    <i class="fas fa-circle text-pink-400 text-sm pr-2"></i>
+                    <h3 class="text-xl inline text-white">{{- name -}}</h3>
+                    <i class="text-gray-400">{{- duration -}}</i>
+                    <p class="text-gray-200 pl-6">
+                        {%- for bullet in bullets -%}
+                            {{- "- " ~ bullet -}}<br/>
+                        {%- endfor -%}
+                    - <a href="{{document}}" target="blank" class="underline text-gray-100">Achivements</a><i class="fas fa-link-externa"></i>
+                    </p>
+                </div>
+            {%- endfor -%}
             </div>
         </div>
     </div>

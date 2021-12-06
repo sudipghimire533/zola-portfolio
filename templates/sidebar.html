@@ -1,14 +1,16 @@
 {%- import "macros/social_icons.html" as social_icons -%}
 
 {# All sidebar details are built from sidebar frontmatter in content/sidebar.md #}
-{% set sidebar = get_page(path="sidebar.md") -%}
+{%- set sidebar = get_page(path="sidebar.md") -%}
 
-{% set name = sidebar.title | trim | title -%}
-{% set intro = sidebar.description | trim -%}
-{% set location = sidebar.extra.location | trim -%}
-{% set avatar_img_path = sidebar.extra.avatar -%}
-{% set menus = sidebar.extra.menu -%}
-{% set social = sidebar.extra.social -%}
+{%- set contact = get_page(path="contact.md") -%}
+
+{%- set name = sidebar.title | trim | title -%}
+{%- set intro = sidebar.description | trim -%}
+{%- set location = contact.extra.location | trim -%}
+{%- set avatar_img_path = sidebar.extra.avatar -%}
+{%- set menus = sidebar.extra.menu -%}
+{%- set social = contact.extra.contact -%}
 
 <nav
     class="h-screen bg-gray-900 text-white overflow-y-auto w-full max-w-370px relative hidden lg:block"
@@ -29,18 +31,18 @@
             </h3>
         </div>
         <div class="inline-flex flex-col items-stretch text-center justify-around flex-grow-1">
-            {% for menu in menus -%}
-                {% set label = menu.label | trim -%}
-                {% set icon = menu.icon -%}
-                {% set target = menu.target | trim -%}
+            {%- for menu in menus -%}
+                {%- set label = menu.label | trim -%}
+                {%- set icon = menu.icon -%}
+                {%- set target = menu.target | trim -%}
                 <a href="{{target}}" class="py-2 my-1 hover:bg-gray-800 focus:bg-gray-800 rounded-lg transition-bg duration-400 group">
                     <i class="{{icon}} pr-2 text-gray-400 group-hover:text-pink-300"></i>{{- label -}}
                 </a>
-            {% endfor -%}
+            {%- endfor -%}
         </div>
         <div class="mt-8">
             <div class="text-center mb-2 text-lg">
-                {{ social_icons::init(social=social, type="array") }}
+                {{- social_icons::init(social=social, show_username=false) -}}
             </div>
             <div class="">
                 &copy; Copyright 2021. All right reserved. Made with <i class="fas fa-heart text-pink-700"></i> by Sudip Ghimire

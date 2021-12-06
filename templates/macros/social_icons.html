@@ -1,67 +1,72 @@
-{%- macro init(social, type="array") -%}
+{%- macro init(social, show_username) -%}
 
 {%- set icon_classes = [] -%}
 {%- set links = [] -%}
 {%- set titles = [] -%}
-
+{%- set usernames = [] -%}
 {%- if social.facebook is defined -%}
     {% set icon_classes = icon_classes | concat(with = "fab fa-facebook") -%}
     {% set links = links | concat(with = "https://facebook.com/" ~ social.facebook) -%}
     {% set titles = titles | concat(with = "Meet me on facebook") -%}
+    {% set usernames = usernames | concat(with = social.facebook) -%}
 {%- endif -%}
 {%- if social.twitter is defined -%}
     {% set icon_classes = icon_classes | concat(with = "fab fa-twitter") -%}
     {% set links = links | concat(with = "https://twitter.com/" ~ social.twitter) -%}
     {% set titles = titles | concat(with = "Follow me on Twitter") -%}
+    {% set usernames = usernames | concat(with = social.twitter) -%}
 {%- endif -%}
 {%- if social.linkedin is defined -%}
     {% set icon_classes = icon_classes | concat(with = "fab fa-linkedin") -%}
     {% set links = links | concat(with = "https://linkedin.com/in/" ~ social.linkedin) -%}
     {% set titles = titles | concat(with = "See my profile on Linkedin") -%}
+    {% set usernames = usernames | concat(with = social.linkedin) -%}
 {%- endif -%}
 {%- if social.github is defined -%}
     {% set icon_classes = icon_classes | concat(with = "fab fa-github") -%}
     {% set links = links | concat(with = "https://github.com/" ~ social.github) -%}
     {% set titles = titles | concat(with = "See my activity on Github") -%}
+    {% set usernames = usernames | concat(with = social.github) -%}
 {%- endif -%}
 {%- if social.gitlab is defined -%}
     {% set icon_classes = icon_classes | concat(with = "fab fa-twitter") -%}
     {% set links = links | concat(with = "https://twitter.com/" ~ social.gitlab) -%}
     {% set titles = titles | concat(with = "See my activity on Gitlab") -%}
+    {% set usernames = usernames | concat(with = social.gitlab) -%}
 {%- endif -%}
 {%- if social.telegram is defined -%}
     {% set icon_classes = icon_classes | concat(with = "fab fa-telegram") -%}
     {% set links = links | concat(with = "https://t.me/" ~ social.telegram) -%}
     {% set titles = titles | concat(with = "Say hy on Telegram") -%}
+    {% set usernames = usernames | concat(with = social.telegram) -%}
 {%- endif -%}
 {%- if social.email is defined -%}
-    {% set icon_classes = icon_classes | concat(with = "fab fa-envelope") -%}
+    {% set icon_classes = icon_classes | concat(with = "fas fa-envelope") -%}
     {% set links = links | concat(with = "mailto:" ~ social.email) -%}
     {% set titles = titles | concat(with = "Email me") -%}
+    {% set usernames = usernames | concat(with = social.email) -%}
 {%- endif -%}
 {%- if social.phone is defined -%}
-    {% set icon_classes = icon_classes | concat(with = "fab fa-phone") -%}
+    {% set icon_classes = icon_classes | concat(with = "fas fa-phone") -%}
     {% set links = links | concat(with = "tel:" ~ social.phone) -%}
     {% set titles = titles | concat(with = "Give me a call") -%}
+    {% set usernames = usernames | concat(with = social.phone) -%}
 {%- endif -%}
 
 
-{%- set icon_count = icon_classes | length -%}
-{%- set link_count = links | length -%}
-{%- set title_count = links | length -%}
+{%- set count = icon_classes | length -%}
 
-{%- if icon_count == link_count and link_count == title_count -%}
-    {%- for i in range(start=0, end=icon_count) -%}
-        {%- set link = links | nth(n=i) -%}
-        {%- set title = titles | nth(n=i) -%}
-        {%- set icon_class = icon_classes | nth(n=i) -%}
-        <a href="{{- link -}}" target="_blank" class="p-2" title="{{- title -}}" >
-            <i class="{{- icon_class }}"></i>
-        </a>
-    {%- endfor -%}
-{%- else -%}
-    <h1>Error while setting required fileds in social icons. Count of required fields are not same</h1>
-{%- endif -%}
-
+{%- for i in range(start=0, end=count) -%}
+    {%- set link = links | nth(n=i) -%}
+    {%- set title = titles | nth(n=i) -%}
+    {%- set icon_class = icon_classes | nth(n=i) -%}
+    {%- set id = usernames | nth(n=i) -%}
+    <a href="{{- link -}}" target="_blank" class="p-2 cursor-pointer group" title="{{- title -}}" >
+        <i class="{{- icon_class }} group-hover:text-pink-500 transition-color duration-200"></i>
+        {%- if show_username -%}
+            <span class="text-sm">{{- '/' ~ id -}}</span>
+        {%- endif -%}
+    </a>
+{%- endfor -%}
 
 {%- endmacro init -%}

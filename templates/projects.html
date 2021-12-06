@@ -7,31 +7,40 @@
     {%- if project_page.extra.anchor_name is defined -%}
         <a name="{{- project_page.extra.anchor_name | trim -}}"></a>
     {%- endif -%}
-    <h1 class="text-3xl text-white"><b class="pr-2 text-pink-400">#</b>{{- heading -}}</h1>
+    <h1 class="text-3xl text-white">
+        <b class="pr-2 text-pink-400">#</b>{{- heading -}}
+    </h1>
     <div class="text-gray-200 text-lg px-4 section-description">
         {{- content | spaceless | trim | safe -}}
     </div>
+
     <div class="mt-6">
         {%- set projects = project_page.extra.project -%}
         {%- set project_count = projects | length -%}
         {%- for project in projects -%}
-            {%- set i = loop.index -%}
+            {%- set i = loop.index0 -%}
             {%- set name = project.name -%}
             {%- set intro = project.intro -%}
             {%- set cover = project.cover -%}
             {%- set tags = project.tags -%}
-            {%- set height = "0" -%}
-            {%- set direction = ["row-reverse", "r"] -%}
-            {%- if i == 0 -%}
-                {%- set height = "auto" -%}
-            {%- elif i%2 != 0 -%}
-                {%- set direction = ["row", "l"] -%}
+            {%- set direction = ["row", "l"] -%}
+            {%- if i%2 != 0 -%}
+                {%- set direction = ["row-reverse", "r"] -%}
             {%- endif -%}
-            <div class="mt-8 md:mt-12 flex-{{- direction | nth(n=0) }} md:flex group cursor-pointer">
+        <div class="mt-8 md:mt-12 md:flex flex-{{- direction | nth(n=0) }} group cursor-pointer relative
+            rounded-lg overflow-hidden">
+
+            <div
+                class="absolute left-0 top-0 h-full w-full bg-norepeat bg-cover md:hidden"
+                style="background-image: url('{{-cover-}}')">
+            </div>
+            <div class="absolute left-0 right-0 h-full w-full bg-gray-900 md:hidden
+                    opacity-90 group-hover:opacity-80 transition-all duration-300">
+            </div>
 
             <img src="{{-cover-}}" alt="{{-name-}}" width="520" height="auto"
-                class="max-w-full hidden md:block opacity-60 transition-all rounded-lg duration-300 group-hover:opacity-100" />
-            <div class="p-2 md:m-4 bg-gray-900 md:bg-transparent rounded-lg md:rouned-none bg-opacity-50 relative flex-grow w-full">
+                class="max-w-full hidden md:block opacity-60 transition-all duration-300 group-hover:opacity-100" />
+            <div class="p-2 md:m-4 rounded-lg md:rouned-none relative flex-grow w-full">
                 <h1 class="text-2xl font-bold text-pink-700 py-2">{{- name | escape -}}</h1>
                 <p class="text-gray-200 py-6 px-4 md:-m{{- direction | nth(n=1) -}}-32 rounded"
                     style="background-color: #353535">
@@ -53,9 +62,8 @@
                     </a>
                 {%- endif -%}
             </div>
-
-            </div>
+        </div>
         {%- endfor -%}
-
     </div>
+
 </section>

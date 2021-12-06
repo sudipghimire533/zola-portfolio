@@ -1,7 +1,11 @@
+{%- import "macros/social_icons.html" as social_icons -%}
+
 {%- set contact = get_page(path="contact.md") -%}
 
 {%- set heading = contact.title | trim -%}
 {%- set content = contact.content -%}
+{%- set social = contact.extra.contact -%}
+{%- set location = contact.extra.location | trim -%}
 <section id="" class="py-6 sm:mx-4 px-1 sm:px-4 my-4 sm:rounded-lg" style="background-color: #272727">
     {%- if about.extra.anchor_name is defined -%}
         <a name="{{- about.extra.anchor_name | trim -}}"></a>
@@ -9,5 +13,11 @@
     <h1 class="text-3xl text-white"><b class="pr-2 text-pink-400">#</b>{{- heading -}}</h1>
     <div class="text-gray-200 text-lg px-4 section-description">
         {{- content | spaceless | trim | safe -}}
+    </div>
+    <div class="text-center text-gray-100 text-xl my-4">
+        <i class="fas fa-map-marker-alt text-pink-500"></i> {{- " " ~ location  -}}
+    </div>
+    <div class="text-2xl text-center mt-2 w-full flex justify-center flex-wrap text-white">
+        {{- social_icons::init(social=social, show_username=true) -}}
     </div>
 </section>
