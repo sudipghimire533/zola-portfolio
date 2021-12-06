@@ -4,7 +4,7 @@
 {%- set intro = education.content -%}
 {%- set items = education.extra.item -%}
 
-<section id="" class="py-6 mx-4 px-4 mb-4 rounded-lg" style="background-color: #272727">
+<section id="" class="py-6 sm:mx-4 px-1 sm:px-4 my-4 sm:rounded-lg" style="background-color: #272727">
     {% if education.extra.anchor_name is defined %}
         <a name="{{- education.extra.anchor_name | trim -}}"></a>
     {% endif %}

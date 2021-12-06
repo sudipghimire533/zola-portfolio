@@ -1,8 +1,21 @@
 +++
-title = "Education Journey"
+title = "My Journey so far"
 
 [extra]
 anchor_name = "education"
+
+[[extra.item]]
+name = "Web developer Intern"
+duration = "Apr 2019- Nov 2019"
+info = [
+    "Codesastra pvt. ltd.",
+    "Communicate, plan and develop in team",
+    "Develop given designed ui and oversee basic backend function",
+    "Deal with clients and document development process",
+    "HTML, CSS, PHP, JS, git"
+    ]
+doc = "/documents/doc-12.pdf"
+
 
 [[extra.item]]
 name = "High School Diploma"

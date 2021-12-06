@@ -16,19 +16,19 @@ icon = "fas fa-tools"
 target="#skills"
 
 [[extra.menu]]
-label = "My Blogs"
-icon = "fas fa-newspaper"
-target="#about"
-
-[[extra.menu]]
 label = "Project Done"
 icon = "fas fa-award"
 target="#projects"
 
 [[extra.menu]]
-label = "Education"
+label = "Education & Work"
 icon = "fas fa-graduation-cap"
 target="#education"
+
+[[extra.menu]]
+label = "My Blogs"
+icon = "fas fa-newspaper"
+target="https://sudipg.com.np"
 
 [[extra.menu]]
 label = "Contact me"
