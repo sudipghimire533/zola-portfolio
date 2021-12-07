@@ -12,9 +12,27 @@
 {%- set menus = sidebar.extra.menu -%}
 {%- set social = contact.extra.contact -%}
 
+{#- Just to keep the w-0 and w-full class from purging while optimizing tailwind -#}
+<i class="w-0 w-full hidden"></i>
+
 <nav
-    class="h-screen bg-gray-900 text-white overflow-y-auto w-full max-w-370px relative hidden lg:block"
-    id="nav">
+    class="h-screen box-border bg-gray-900 text-white overflow-y-auto overflow-x-hidden transition-width duration-300 
+            xms:min-width-320px w-0 lg:w-full max-w-400px z-30
+            absolute lg:static p-0 m-0"
+    id="sidebar">
+
+    {#- Expand sidebar -#}
+    <i class="fas fa-bars text-2xl text-pink-400 hover:text-pink-500 fixed p-2 m-2 left-0
+        rounded-md bg-gray-900 cursor-pointer z-10"
+        title="Show sidebar" id="expand_sidebar"></i>
+
+    <span class="relative">
+    {#- Close sidebar -#}
+    <i class="fas fa-times lg:fa-bars text-2xl text-pink-400 hover:text-pink-500
+        absolute p-2 m-2 left-0 cursor-pointer z-10 bg-gray-900"
+        title="Close sidebar" id="collapse_sidebar"></i>
+    </span>
+
     <div class="inline-flex flex-col h-full p-4 md:pt-12 justify-between">
         <div class="inline-flex flex-col items-center">
             <img
@@ -26,7 +44,7 @@
                 loading="lazy" />
             <h1 class="text-4xl font-bold text-center mt-2">{{- name -}}</h1>
             <h3 class="text-center mb-4 text-md">
-                <p class="text-pink-400 inline">{{- intro -}}</p>
+                <p class="text-pink-500 inline">{{- intro -}}</p>
                 <p class="inline">from {{ location -}}</p>
             </h3>
         </div>

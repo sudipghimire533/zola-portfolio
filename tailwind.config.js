@@ -3,6 +3,14 @@ module.exports = {
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
+        screens: {
+            'xms': '480px',
+        },
+        minWidth: {
+            'screen': '100vh',
+            'auto': 'auto',
+            '320px': '320px',
+        },
         transitionProperty: {
             'bg': 'background',
         },
