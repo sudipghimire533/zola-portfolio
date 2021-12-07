@@ -1,12 +1,10 @@
 function expand_sidebar(sidebar) {
-    console.log("Show..");
     sidebar.classList.remove('w-0');
     sidebar.classList.add('w-screen');
-    sidebar.classList.add("w-screen")
+    sidebar.classList.add('lg:w-full')
 }
 
 function collapse_sidebar(sidebar) {
-    console.log("Hide..");
     sidebar.classList.add("w-0");
     sidebar.classList.remove("lg:w-full");
     sidebar.classList.remove("w-screen");
