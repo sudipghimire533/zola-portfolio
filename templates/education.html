@@ -8,11 +8,19 @@
     {% if education.extra.anchor_name is defined %}
         <a name="{{- education.extra.anchor_name | trim -}}"></a>
     {% endif %}
+
     <h1 class="text-3xl text-white w-full"><b class="pr-2 text-pink-400">#</b>{{- heading -}}</h1>
     <div class="text-gray-200 text-lg px-4 section-description">
         {{- intro | spaceless | trim | safe -}}
     </div>
-    <div class="flex flex-row flex-wrap mt-2">
+    <div class="flex flex-row flex-wrap mt-2 relative">
+
+        {%- if education.extra.cover is defined -%}
+            <span class="absolute left-0 bottom-0 w-full h-full bg-contain bg-right-top bg-no-repeat"
+                    style="background-image: url('{{- education.extra.cover -}}')"></span>
+           <span class="absolute left-0 bottom-0 w-full h-full opacity-70" style="background-color: #272727"></span>
+        {%- endif -%}
+
         <div class="px-2 relative border-gray-300">
             {%- set items_count = items | length -%}
             {%- for item in items -%}

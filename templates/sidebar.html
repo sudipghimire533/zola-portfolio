@@ -12,8 +12,9 @@
 {%- set menus = sidebar.extra.menu -%}
 {%- set social = contact.extra.contact -%}
 
-{#- Just to keep the w-0 and w-full class from purging while optimizing tailwind -#}
-<i class="w-0 w-full hidden"></i>
+{#- Just to keep the classes from purging while optimizing tailwind.
+    These class were used in static/script.js -#}
+<i class="w-0 w-full w-screen lg:w-full hidden"></i>
 
 <nav
     class="h-screen box-border bg-gray-900 text-white overflow-y-auto overflow-x-hidden transition-width duration-300 
@@ -63,7 +64,7 @@
                 {{- social_icons::init(social=social, show_username=false) -}}
             </div>
             <div class="">
-                &copy; Copyright 2021. All right reserved. Made with <i class="fas fa-heart text-pink-700"></i> by Sudip Ghimire
+                &copy; Copyright 2021. All right reserved. Made with <i class="far fa-heart"></i> by Sudip Ghimire using <a href="https://getzola.org" target="_blank" title="Zola static site generator" class="text-blue-500">Zola</a>.
             </div>
         </div>
     </div>

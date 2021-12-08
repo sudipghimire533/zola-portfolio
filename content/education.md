@@ -3,6 +3,7 @@ title = "My Journey so far"
 
 [extra]
 anchor_name = "education"
+cover = "/images/praying.png"
 
 [[extra.item]]
 name = "Web developer Intern"
@@ -46,3 +47,7 @@ info = [
 doc = "/documents/doc-8.pdf"
 
 +++
+
+I found my head start in IT field when I was at school in year 2018 and beside the strong foundational knowledge I recived from my school teachers, I tough myself to program and to build real things. I contunied my self learning after school, Joined intenships, Started freelancing, Done projects and I now see better things ahead of me.
+
+I would like to remember the hands that raised me, friends who kept me falling, family relatives who made it possible to keep myself going and everyone who prayed from me. I really feel blessed remembering you guys <i class='fas fa-heart text-pink-500'></i>

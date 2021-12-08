@@ -15,7 +15,7 @@ tags = ['rust', 'tui', 'cli', 'yutube', 'music']
 name = "Primordial Shop"
 intro = "Yeah!! attractive hand made wears to make you ready to shine with. Primordial-shop is an e-commerce webiste based on JAMstack and powered by netlify function with too-fast page loading, beautiful yet simple ui and exactly no more than what buyers want to see."
 cover = "/images/projects/primordial-shop.png"
-source = "https://www.gitlab.com/pprimordial/primordial-website"
+source = "https://www.gitlab.com/pprimodial/primordial-website"
 home = "https://primordial-shop.netlify.app"
 tags = ['zola', 'jamstack', 'netlify', 'tailwind', 'web']
 
@@ -23,7 +23,7 @@ tags = ['zola', 'jamstack', 'netlify', 'tailwind', 'web']
 name = "Zola-portfolio"
 intro = "Sleek, configurable and lightweight one page portfolio theme for zola site builder backed by tailwindcss."
 cover = "/images/projects/zola-portfolio.png"
-source = "https://github.com/sudipghimire533/sudipghimire533/github.io"
+source = "https://github.com/sudipghimire533/sudipghimire533.github.io"
 home = "https://me.sudipg.com.np"
 tags = ['zola', 'web', 'tailwind', 'theme']
 
