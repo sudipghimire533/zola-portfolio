@@ -61,7 +61,7 @@
     {%- set title = titles | nth(n=i) -%}
     {%- set icon_class = icon_classes | nth(n=i) -%}
     {%- set id = usernames | nth(n=i) -%}
-    <a href="{{- link -}}" target="_blank" class="p-2 cursor-pointer group" title="{{- title -}}" >
+    <a href="{{- link -}}" class="p-2 cursor-pointer group" title="{{- title -}}" >
         <i class="{{- icon_class }} group-hover:text-pink-500 transition-color duration-200"></i>
         {%- if show_username -%}
             <span class="text-sm">{{- '/' ~ id -}}</span>
