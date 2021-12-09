@@ -23,7 +23,7 @@ jobs:
           npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
 
       - name: Building
-        run: npx tailwindcss -i templates/tailwind.css -c tailwind.config.js -o static/tailwind.cs
+        run: npx tailwindcss -i templates/tailwind.css -c tailwind.config.js -o static/tailwind.css
 
       - name: Update local repo
         run: |
