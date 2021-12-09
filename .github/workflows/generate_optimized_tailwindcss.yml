@@ -5,6 +5,7 @@ on:
     paths:
       - 'postcss.config.js'
       - 'templates/tailwind.css'
+  workflow_dispatch:
 
 
 jobs:
