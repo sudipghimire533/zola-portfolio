@@ -30,7 +30,7 @@ jobs:
         run: |
           git config --local user.name ${{ github.actor }}
           git add -f static/tailwind.css
-          git comit -m "[post push] Generate optimized tailwindcss"
+          git commit -m "[post push] Generate optimized tailwindcss"
 
       - name: Push changes
         uses: ad-m/github-push-action@master
