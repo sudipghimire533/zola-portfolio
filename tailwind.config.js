@@ -1,7 +1,7 @@
 module.exports = {
   purge: {
-        content: [  'public/index.html',
-                    'public/404.html'
+        content: [
+            'templates/**/*.html',
         ],
         options: {
             keyframes: true
