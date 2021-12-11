@@ -2,7 +2,7 @@
 
 {%- set heading = skills.title | trim -%}
 {%- set content = skills.content -%}
-
+{%- set tools = skills.extra.tool -%}
 <section id="" class="py-6 sm:mx-4 px-1 sm:px-4 my-4 sm:rounded-lg" style="background-color: #272727">
     {%- if about.extra.anchor_name is defined -%}
         <a name="{{- about.anchor_name | trim -}}">
@@ -11,7 +11,22 @@
     <div class="text-lg text-gray-200 px-4 section-description">
         {{- content | spaceless | trim | safe -}}
     </div>
-    <div class="">
+    <div class="flex flex-wrap mt-4 justify-center">
+        {%- for tool in tools -%}
+            {%- set label = tool.label -%}
+            {%- set icon = tool.icon -%}
+            <div class="block relative text-white m-2 text-center group cursor-pointer">
+                <span class="absolute py-1 px-2 m-1 rounded-md w-full min-w-max left-auto invisible bottom-full
+                    z-10 transition-all duration-400 group-hover:visible flex justify-center bg-gray-900">
+                    <span class="whitespace-nowrap w-max text-base">{{- label | title -}}</span>
+                </span>
+                <img src="{{icon}}"
+                    alt="{{label}}"
+                    load="lazy"
+                    height="128"
+                    width="128" />
+            </div>
+        {%- endfor -%}
     </div>
 </section>
 
