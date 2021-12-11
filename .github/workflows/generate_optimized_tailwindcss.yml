@@ -6,8 +6,6 @@ on:
       - 'postcss.config.js'
       - 'tailwind.config.js'
       - 'templates/tailwind.css'
-  workflow_dispatch:
-
 
 jobs:
   purge_tailwind:
