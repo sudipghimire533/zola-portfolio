@@ -4,14 +4,9 @@ title = "About me"
 [extra]
 anchor_name = "about"
 +++
-The name is Sudip Ghimire. I am currently living in Pokhara, Nepal. In early 2019, I was told machines are to programmed and I have been hitting keyboard ever since.
-In early days, I remember myself exploring everything from Game development, 3D modeling, web development to Cyber Security and what not.
-I belive in creating value.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean facilisis nulla vel lorem blandit, in pretium lacus interdum. Phasellus sit amet tristique mi, ut dapibus dui. Aliquam id velit felis.
+Duis ut purus sed risus interdum tincidunt. Nullam quis velit lectus. Morbi ullamcorper semper nibh sit amet sagittis. Curabitur at dapibus ex, tempus commodo leo. Praesent id nisi sit amet lacus lobortis dictum at vitae mauris. Quisque in posuere risus.
 
+Maecenas dictum nisl nec massa congue, consequat viverra mauris molestie. Etiam pharetra justo sed lacus auctor, vitae finibus massa porttitor. Nunc gravida est a lacinia venenatis.
 
-If I am not wiriting about something random my mind pop me with, you will find me listening to music all the time.
-Beside those, I love reading blogs, watching fantasy and walking some great miles. And of course I do love watching people behaviour and reaction over several things.
-
-
-Exploring open source have always been something that keeps me engaged and contributing to such great communities is even more pleasing.
-Do you know, how fun is it to just install and try new programs, learning about not-so-mature technologies or someone else's hobby project?
+Integer dictum venenatis tristique. Vivamus vel lobortis erat. Nunc massa odio, lobortis a nisi non, luctus ullamcorper lacus. Aenean tincidunt purus in metus elementum aliquam.

@@ -5,30 +5,28 @@ title = "My toolkits"
 anchor_name = "skills"
 
 [[extra.tool]]
-label = "Rust Programming"
-icon = "https://www.rust-lang.org/logos/rust-logo-blk.svg"
-
-[[extra.tool]]
-label = "Debian Linux"
-icon = "https://www.debian.org/logos/openlogo.svg"
+label = "Web Development"
+icon = "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
 
 [[extra.tool]]
 label = "Web Development"
 icon = "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
 
 [[extra.tool]]
-label = "Zola"
-icon = "https://www.getzola.org/favicon.ico"
+label = "Web Development"
+icon = "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
 
 [[extra.tool]]
-label = "Git"
-icon = "https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg"
+label = "Web Development"
+icon = "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
 
 [[extra.tool]]
-label = "Neovim"
-icon = "https://upload.wikimedia.org/wikipedia/commons/4/4f/Neovim-logo.svg"
+label = "Web Development"
+icon = "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
 
+[[extra.tool]]
+label = "Web Development"
+icon = "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
 +++
 
-I would like to introduce myself as a software developer who also happened to be activly involved in web development and cloud thing.
-These are my skills set I am confident enough about along with some of tools I constantly use.
+Phasellus pellentesque eget augue non fermentum. Nullam sagittis mollis risus nec hendrerit. Maecenas accumsan massa placerat metus tincidunt varius. Aliquam id dictum orci, ac ullamcorper elit. Sed auctor ipsum id nunc placerat, ac hendrerit libero iaculis

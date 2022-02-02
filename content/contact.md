@@ -4,7 +4,7 @@ title = "Reach out"
 [extra]
 anchor_name = "contact"
 
-location = "Pokhara, Nepal"
+location = "City, Country"
 [extra.contact]
 # facebook = "sudip.ghimire.533"
 twitter = "@sudipghimire533"
@@ -16,7 +16,7 @@ linkedin = "sudipghimire533"
 # telegram = ""
 # instagran = ""
 # paypal = ""
-phone = "+977 9866008267"
+phone = "+977 00000000000"
 email = "ping.sudip@gmail.com"
 
 +++
